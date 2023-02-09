@@ -22,24 +22,23 @@ public class Engineer {
 		this.degrees=degrees;
 		
 	}
-	
-	public void initialVariables(String name,double salary) {
-		this.name=name;
-		this.salary=salary;
-	}
 
 	public void display() {
 
 	System.out.println("name:"+this.name);
 	System.out.println("salary:"+this.salary);
+	
 
 		if (this.skills != null) {
 			for (int seq = 0; seq < this.skills.length; seq++) {
 				String element = this.skills[seq];
 				System.out.println(element + "  at index " + seq );
+				
 			}
 		} else
 			System.out.println();
+		
+
 		
 		
 		if (this.degrees!=null) {
