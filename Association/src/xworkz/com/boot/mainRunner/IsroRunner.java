@@ -9,10 +9,10 @@ public class IsroRunner {
 	public static void main(String[] args) {
 
 		Isro isro = new Isro();
-		String[] loc= { "Bangalore", "Myasore", "Hasan" };
+		String[] loc= { "Bangalore", "Mysore", "Hasan" };
 		isro.setLocation(loc);
 
-		int[] num= { 14, 15, 16, 17 };
+		int[] num= { 12, 16, 15, 22 };
 		isro.setSatelliteNo(num);
 		isro.display();
 

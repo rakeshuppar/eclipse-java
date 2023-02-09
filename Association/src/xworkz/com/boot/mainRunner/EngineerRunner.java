@@ -8,7 +8,8 @@ public class EngineerRunner {
 	public static void main(String[] args) {
 		
 		Engineer engineer=new Engineer();
-		engineer.initialVariables("navvenKumar", 50000);
+		engineer.setName("navenKumar");
+		engineer.setSalary(50000);
 		
 		String[]skill={"leadership","creativity","communication"};
 		engineer.setSkills(skill);
