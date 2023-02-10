@@ -6,7 +6,16 @@ public class Area {
 	public double population;
 	public String street;
 
-	
+	public Area() {
+		System.out.println("calling with no arg constructor");
+	}
+
+	public Area(String name, double population, String street) {
+		this.name = name;
+		this.population = population;
+		this.street = street;
+	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -20,11 +29,11 @@ public class Area {
 	}
 
 	public void display() {
-		//System.out.println("Display START");
-		System.out.println("name:" + this.name);
-		System.out.println("population:" + this.population);
+
+		System.out.println("Details of area");
+		System.out.println("Areaname:" + this.name);
+		System.out.println("population of the area:" + this.population);
 		System.out.println("street:" + this.street);
-		//System.out.println("Display END");
 
 	}
 

@@ -7,7 +7,16 @@ public class State {
 	public String language;
 	public City city;
 
-	
+	public State() {
+		System.out.println("calling with no arg constructor");
+	}
+
+	public State(String name, String cmName, String language, City city) {
+		this.name = name;
+		this.cmName = cmName;
+		this.language = language;
+		this.city = city;
+	}
 
 	public void setName(String name) {
 		this.name = name;
@@ -27,14 +36,15 @@ public class State {
 	}
 
 	public void display() {
-		System.out.println("name:" + this.name);
+		System.out.println("Details of State");
+		System.out.println("Statename:" + this.name);
 		System.out.println("cmName:" + this.cmName);
 		System.out.println("language:" + this.language);
 
 		if (this.city != null) {
 			this.city.display();
 			System.out.println("");
-			city.display();
+
 		} else {
 			System.out.println("this.city is null");
 		}

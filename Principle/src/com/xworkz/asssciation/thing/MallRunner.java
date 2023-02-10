@@ -12,30 +12,19 @@ public class MallRunner {
 
 	public static void main(String[] args) {
 
-		Area area = new Area();
+		Area area = new Area("Chikkadapur", 2000, "Benakandoni Road");
 
-		City city = new City();
-		city.setArea(area);
-		city.display();
+		City city = new City("Ilkal", "Bagalkot", "Bangalore", area);
 
-		State state = new State();
-		state.setCity(city);
-		state.display();
+		State state = new State("Karnataka", "Basavaraj Bommai", "Kannada", city);
 
-		Country country = new Country();
-		country.setState(state);
-		country.display();
+		Country country = new Country("India", "Draupadi Murmu", true, state);
 
-		Company company = new Company();
-		company.setCountry(country);
-		company.display();
+		Company company = new Company("infosys", "Salil Parekh", 1981, country);
 
-		Security security = new Security();
-		security.setCompany(company);
-		security.display();
+		Security security = new Security("ISC", 150.0d, "Raghu Das", company);
 
-		Mall mall = new Mall();
-		mall.setSecurity(security);
+		Mall mall = new Mall("Orion Mall", "Good", 5, security);
 		mall.display();
 
 	}

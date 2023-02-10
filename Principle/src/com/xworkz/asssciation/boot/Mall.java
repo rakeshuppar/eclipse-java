@@ -7,7 +7,17 @@ public class Mall {
 	public int totalFloors;
 	public Security security;
 
-	
+	public Mall() {
+		System.out.println("calling with no arg constructor");
+	}
+
+	public Mall(String name, String ambience, int totalFloors, Security security) {
+		this.name = name;
+		this.ambience = ambience;
+		this.totalFloors = totalFloors;
+		this.security = security;
+	}
+
 	public void setName(String name) {
 		this.name = name;
 
@@ -26,18 +36,22 @@ public class Mall {
 	}
 
 	public void display() {
-		System.out.println("name:" + this.name);
-		System.out.println("ambience:" + this.ambience);
-		System.out.println("totalFloors:" + this.totalFloors);
+		System.out.println("Display START");
+		System.out.println("deatails of mall");
+		System.out.println("Mallname:" + this.name);
+		System.out.println("ambience of the Mall:" + this.ambience);
+		System.out.println("totalFloors in the Mall:" + this.totalFloors);
 
 		if (this.security != null) {
 			this.security.display();
+
 			System.out.println("");
-			security.display();
+
 		} else {
 			System.out.println("this.security is null");
 
 		}
+		System.out.println("Display END");
 
 	}
 

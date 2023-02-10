@@ -7,7 +7,18 @@ public class City {
 	public String capital;
 	public Area area;
 
-	
+	public City() {
+		System.out.println("calling with no arg constructor");
+	}
+
+	public City(String name, String district, String capital, Area area) {
+		this.name = name;
+		this.district = district;
+		;
+		this.capital = capital;
+		this.area = area;
+	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -25,14 +36,15 @@ public class City {
 	}
 
 	public void display() {
-		System.out.println("name:" + this.name);
+		System.out.println("Details of City");
+		System.out.println("Cityname:" + this.name);
 		System.out.println("disrict:" + this.district);
 		System.out.println("capital:" + this.capital);
 
 		if (this.area != null) {
 			this.area.display();
 			System.out.println("");
-			area.display();
+
 		} else {
 			System.out.println("this.city is null");
 		}

@@ -7,7 +7,17 @@ public class Security {
 	public String headStaff;
 	public Company company;
 
-	
+	public Security() {
+		System.out.println("calling with no arg constructor");
+	}
+
+	public Security(String deptName, double totalStaff, String headStaff, Company company) {
+		this.deptName = deptName;
+		this.totalStaff = totalStaff;
+		this.headStaff = headStaff;
+		this.company = company;
+	}
+
 	public void setDeptName(String deptName) {
 		this.deptName = deptName;
 	}
@@ -25,13 +35,14 @@ public class Security {
 	}
 
 	public void display() {
-		System.out.println("deptName:" + this.deptName);
-		System.out.println("totalStaff" + this.totalStaff);
-		System.out.println("headStaff:+" + this.headStaff);
+		System.out.println("display of Security");
+		System.out.println("Security deptName:" + this.deptName);
+		System.out.println("totalStaff in the dept" + this.totalStaff);
+		System.out.println("headStaff of the security:+" + this.headStaff);
 		if (this.company != null) {
 			this.company.display();
 			System.out.println("");
-			company.display();
+
 		} else {
 			System.out.println("this.company is null");
 			company.display();
