@@ -14,7 +14,6 @@ public class City {
 	public City(String name, String district, String capital, Area area) {
 		this.name = name;
 		this.district = district;
-		;
 		this.capital = capital;
 		this.area = area;
 	}
@@ -38,7 +37,7 @@ public class City {
 	public void display() {
 		System.out.println("Details of City");
 		System.out.println("Cityname:" + this.name);
-		System.out.println("disrict:" + this.district);
+		System.out.println("district:" + this.district);
 		System.out.println("capital:" + this.capital);
 
 		if (this.area != null) {

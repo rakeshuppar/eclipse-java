@@ -1,4 +1,4 @@
-package com.xworkz.boot.equal;
+package com.xworkz.things.equal;
 
 public class Alcohal {
 
@@ -35,6 +35,7 @@ public class Alcohal {
 				if (left.brand.equals(brand) && (left.percentage == right.percentage) && (left.price == right.price)
 						&& (left.type.equals(type))) {
 					System.out.println("left is equal to right");
+					return true;
 				} else {
 					System.err.println("left is not equal to right");
 				}
@@ -45,13 +46,13 @@ public class Alcohal {
 			System.err.println("obj is null");
 		}
 
-		return true;
+		return false;
 	}
 
 	@Override
 	public String toString() {
 		System.out.println("running toString in Alcohal");
-		return "brand:" + this.brand + "percentage:" + this.percentage + "price:" + this.price + "type:" + this.type;
+		return "brand:" + this.brand + " percentage:" + this.percentage + " price:" + this.price + " type:" + this.type;
 	}
 
 }

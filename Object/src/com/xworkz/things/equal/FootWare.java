@@ -1,4 +1,4 @@
-package com.xworkz.boot.equal;
+package com.xworkz.things.equal;
 
 public class FootWare {
 
@@ -32,6 +32,7 @@ public class FootWare {
 
 				if (left.brand.equals(brand) && (left.size == right.size) && (left.type.equals(type))) {
 					System.out.println("left is equal to right");
+					return true;
 				} else {
 					System.err.println("left is not equal to right");
 				}
@@ -44,7 +45,7 @@ public class FootWare {
 			System.err.println("obj is null");
 		}
 
-		return true;
+		return false;
 	}
 
 	@Override

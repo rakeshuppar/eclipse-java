@@ -1,4 +1,4 @@
-package com.xworkz.boot.equal;
+package com.xworkz.things.equal;
 
 public class Tv {
 
@@ -41,7 +41,7 @@ public class Tv {
 		} else {
 			System.err.println("obj is null");
 		}
-		return true;
+		return false;
 
 	}
 

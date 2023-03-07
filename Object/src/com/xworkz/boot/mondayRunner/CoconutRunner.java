@@ -1,6 +1,6 @@
-package com.xworkz.mondayRunner;
+package com.xworkz.boot.mondayRunner;
 
-import com.xworkz.monday.Coconut;
+import com.xworkz.things.monday.Coconut;
 
 public class CoconutRunner {
 

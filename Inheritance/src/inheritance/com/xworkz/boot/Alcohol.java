@@ -2,7 +2,7 @@ package inheritance.com.xworkz.boot;
 
 public class Alcohol {
 
-	private String name;
+	 String name;
 
 	public Alcohol() {
 		System.out.println("calling Alcohol with no arg constructor");

@@ -1,6 +1,6 @@
 package com.xworkz.boot.equalRunner;
 
-import com.xworkz.boot.equal.Alcohal;
+import com.xworkz.things.equal.Alcohal;
 
 public class AlcohalRunner {
 

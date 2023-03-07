@@ -1,4 +1,4 @@
-package com.xworkz.boot.equal;
+package com.xworkz.things.equal;
 
 public class Fridge {
 	private String brand;
@@ -52,6 +52,7 @@ public class Fridge {
 								&& (left.ledLight == right.ledLight) && (left.refrigerant == right.refrigerant)
 								&& ((left.pump.equals(pump)) && (left.watt == right.watt)))) {
 					System.out.println("left is equal to right");
+					return true;
 				} else {
 					System.err.println("left is not equal to right");
 				}
@@ -62,7 +63,7 @@ public class Fridge {
 			System.err.println("obj is null");
 		}
 
-		return true;
+		return false;
 	}
 
 	@Override

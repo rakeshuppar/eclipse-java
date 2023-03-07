@@ -1,4 +1,4 @@
-package com.xworkz.boot.equal;
+package com.xworkz.things.equal;
 
 public class ChiefMinister {
 
@@ -56,6 +56,7 @@ public class ChiefMinister {
 						&& (left.memberOf.equals(memberOf)) && (left.reportsTo.equals(reportsTo))
 						&& left.nominator.equals(nominator) && (left.indian == right.indian)) {
 					System.out.println("left is equal to right");
+					return true;
 				} else {
 					System.err.println("left is not equal to right");
 				}
@@ -66,7 +67,7 @@ public class ChiefMinister {
 			System.err.println("obj is null");
 		}
 
-		return true;
+		return false;
 	}
 
 	@Override

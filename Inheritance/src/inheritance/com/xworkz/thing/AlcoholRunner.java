@@ -12,6 +12,7 @@ public class AlcoholRunner {
 		String name = whiskey.getName();
 		System.out.println("name:" + name);
 		whiskey.hard();
+		
 
 		Alcohol alcohol = new Whiskey();
 		alcohol.name("wine");

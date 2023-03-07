@@ -1,6 +1,6 @@
-package com.xworkz.mondayRunner;
+package com.xworkz.boot.mondayRunner;
 
-import com.xworkz.monday.SugarCane;
+import com.xworkz.things.monday.SugarCane;
 
 public class SugarCaneRunner {
 

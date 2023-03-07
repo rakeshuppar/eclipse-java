@@ -1,6 +1,6 @@
 package com.xworkz.boot.equalRunner;
 
-import com.xworkz.boot.equal.Cake;
+import com.xworkz.things.equal.Cake;
 
 public class CakeRunner {
 

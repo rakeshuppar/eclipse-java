@@ -1,6 +1,6 @@
 package com.xworkz.boot.equalRunner;
 
-import com.xworkz.boot.equal.Fridge;
+import com.xworkz.things.equal.Fridge;
 
 public class FridgeRunner {
 

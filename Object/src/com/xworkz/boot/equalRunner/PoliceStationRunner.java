@@ -1,6 +1,6 @@
 package com.xworkz.boot.equalRunner;
 
-import com.xworkz.boot.equal.PoliceStation;
+import com.xworkz.things.equal.PoliceStation;
 
 public class PoliceStationRunner {
 

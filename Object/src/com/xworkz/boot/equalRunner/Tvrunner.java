@@ -1,6 +1,6 @@
 package com.xworkz.boot.equalRunner;
 
-import com.xworkz.boot.equal.Tv;
+import com.xworkz.things.equal.Tv;
 
 public class Tvrunner {
 

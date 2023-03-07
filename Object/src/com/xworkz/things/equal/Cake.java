@@ -1,4 +1,4 @@
-package com.xworkz.boot.equal;
+package com.xworkz.things.equal;
 
 public class Cake {
 
@@ -34,6 +34,8 @@ public class Cake {
 				if (left.flavour.equals(flavour) && (left.weight == right.weight)
 						&& (left.shape.equals(shape) && (left.location.equals(location)))) {
 					System.out.println("left is equal to right");
+					return true;
+
 				} else {
 					System.err.println("left is not equal to right");
 				}
@@ -44,7 +46,7 @@ public class Cake {
 			System.err.println("obj is null");
 		}
 
-		return true;
+		return false;
 	}
 
 	@Override

@@ -1,4 +1,4 @@
-package com.xworkz.boot.equal;
+package com.xworkz.things.equal;
 
 public class Park {
 
@@ -39,6 +39,7 @@ public class Park {
 						&& (left.ground == right.ground) && (left.restRoom == right.restRoom)
 						&& (left.trees == right.trees)) {
 					System.out.println("left is equal to right");
+					return true;
 				} else {
 					System.err.println("left is not equal to right");
 				}
@@ -49,7 +50,7 @@ public class Park {
 			System.err.println("obj is null");
 		}
 
-		return true;
+		return false;
 	}
 
 	@Override

@@ -1,6 +1,6 @@
-package com.xworkz.mondayRunner;
+package com.xworkz.boot.mondayRunner;
 
-import com.xworkz.monday.Gold;
+import com.xworkz.things.monday.Gold;
 
 public class GoldRunner {
 

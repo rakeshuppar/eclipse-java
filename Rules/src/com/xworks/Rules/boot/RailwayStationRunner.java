@@ -24,7 +24,7 @@ public class RailwayStationRunner {
 		System.out.println("smoke:" + smoke);
 		boolean alcohol = station.drinksAlcohol();
 		System.out.println("drinksAlchohal:" + alcohol);
-
+ 
 		System.out.println(station.equals(station));
 		System.out.println(station.hashCode());
 		System.out.println(station.toString());

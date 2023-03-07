@@ -1,6 +1,6 @@
-package com.xworkz.mondayRunner;
+package com.xworkz.boot.mondayRunner;
 
-import com.xworkz.monday.Door;
+import com.xworkz.things.monday.Door;
 
 public class DoorRunner {
 

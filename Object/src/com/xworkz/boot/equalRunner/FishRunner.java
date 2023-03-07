@@ -1,6 +1,6 @@
 package com.xworkz.boot.equalRunner;
 
-import com.xworkz.boot.equal.Fish;
+import com.xworkz.things.equal.Fish;
 
 public class FishRunner {
 

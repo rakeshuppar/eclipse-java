@@ -1,6 +1,6 @@
 package com.xworkz.boot.equalRunner;
 
-import com.xworkz.boot.equal.WaterFall;
+import com.xworkz.things.equal.WaterFall;
 
 public class WaterFallRunner {
 

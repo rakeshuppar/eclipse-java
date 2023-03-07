@@ -1,6 +1,6 @@
 package com.xworkz.boot.equalRunner;
 
-import com.xworkz.boot.equal.Park;
+import com.xworkz.things.equal.Park;
 
 public class ParkRunner {
 

@@ -20,11 +20,13 @@ public class RotiRunner {
 		RagiRoti roti11 = new RagiRoti();
 
 		roti11.getShape();
+
 		double calories = roti11.getCalories();
-		System.out.println("calories:" + calories);
+
 		if (roti1 instanceof RagiRoti) {
 			RagiRoti cast = (RagiRoti) roti1;
 			cast.getCalories();
+			System.out.println("calories:" + calories);
 		} else {
 			System.err.println("roti1 is exception");
 
@@ -36,12 +38,12 @@ public class RotiRunner {
 			roti222.getWeight();
 
 			double weight = roti222.getWeight();
-			System.out.println("weight:" + weight);
-			roti222.getWeight();
+			roti222.getShape();
 
 			if (roti2 instanceof OnionRagiRoti) {
 				OnionRagiRoti cast1 = (OnionRagiRoti) roti2;
 				cast1.getWeight();
+				System.out.println("weight:" + weight);
 			} else {
 				System.err.println("roti2 is exception");
 			}
@@ -49,6 +51,8 @@ public class RotiRunner {
 			if (roti22 instanceof OnionRagiRoti) {
 				OnionRagiRoti cast2 = (OnionRagiRoti) roti22;
 				cast2.getWeight();
+				System.out.println("weight:" + weight);
+
 			} else {
 				System.err.println("roti2 is exception");
 			}
@@ -64,12 +68,13 @@ public class RotiRunner {
 			roti3333.getThickness();
 
 			double thickness = roti3333.getThickness();
-			System.out.println(thickness);
+
 			roti3333.getThickness();
 
 			if (roti3 instanceof OnionMasalaRagiRoti) {
 				OnionMasalaRagiRoti cast3 = (OnionMasalaRagiRoti) roti3;
 				cast3.getThickness();
+				System.out.println("Thickness:" + thickness);
 			} else {
 				System.err.println("roti3 is exception");
 			}
@@ -77,6 +82,7 @@ public class RotiRunner {
 			if (roti33 instanceof OnionMasalaRagiRoti) {
 				OnionMasalaRagiRoti cast4 = (OnionMasalaRagiRoti) roti33;
 				cast4.getThickness();
+				System.out.println("Thickness:" + thickness);
 			} else {
 				System.err.println("roti3 is exception");
 			}
@@ -84,6 +90,7 @@ public class RotiRunner {
 			if (roti333 instanceof OnionMasalaRagiRoti) {
 				OnionMasalaRagiRoti cast5 = (OnionMasalaRagiRoti) roti333;
 				cast5.getThickness();
+				System.out.println("Thickness:" + thickness);
 			} else {
 				System.err.println("roti3 is exception");
 			}
@@ -92,12 +99,14 @@ public class RotiRunner {
 			ButterRoti roti44 = new ButterRoti();
 
 			roti44.getLength();
+			roti44.getShape();
+
 			String length = roti44.getLength();
-			System.out.println(length);
 
 			if (roti4 instanceof ButterRoti) {
 				ButterRoti cast6 = (ButterRoti) roti44;
 				cast6.getLength();
+				System.out.println("length:" + length);
 			} else {
 				System.err.println("roti4 is exception");
 			}
@@ -111,11 +120,11 @@ public class RotiRunner {
 			roti555.getPrice();
 
 			double price = roti555.getPrice();
-			System.out.println(price);
 
 			if (roti5 instanceof JowarRoti) {
 				JowarRoti cast7 = (JowarRoti) roti5;
 				cast7.getPrice();
+				System.out.println("price:" + price);
 			} else {
 				System.err.println("roti5 is exception");
 			}
@@ -123,6 +132,7 @@ public class RotiRunner {
 			if (roti55 instanceof JowarRoti) {
 				JowarRoti cast8 = (JowarRoti) roti55;
 				cast8.getPrice();
+				System.out.println("price:" + price);
 			} else {
 				System.err.println("roti5 is exception");
 			}
@@ -136,11 +146,11 @@ public class RotiRunner {
 			roti666.getPrice();
 
 			double price1 = roti666.getPrice();
-			System.out.println(price1);
 
 			if (roti6 instanceof Naan) {
 				Naan cast9 = (Naan) roti6;
 				cast9.getPrice();
+				System.out.println("price1:" + price1);
 			} else {
 				System.err.println("roti6 is exception");
 			}
@@ -148,6 +158,7 @@ public class RotiRunner {
 			if (roti66 instanceof Naan) {
 				Naan cast9 = (Naan) roti66;
 				cast9.getPrice();
+				System.out.println("price1:" + price1);
 			} else {
 				System.out.println("roti6 is exception");
 			}
@@ -163,11 +174,11 @@ public class RotiRunner {
 			roti7777.getType();
 
 			String type = roti7777.getType();
-			System.out.println(type);
 
 			if (roti7 instanceof Kulcha) {
 				Kulcha cast10 = (Kulcha) roti7;
 				cast10.getType();
+				System.out.println("Type:" + type);
 			} else {
 				System.err.println("roti7 is exception");
 			}
@@ -175,6 +186,7 @@ public class RotiRunner {
 			if (roti77 instanceof Kulcha) {
 				Kulcha cast11 = (Kulcha) roti77;
 				cast11.getType();
+				System.out.println("Type:" + type);
 			} else {
 				System.err.println("roti7 is exception");
 			}
@@ -182,6 +194,7 @@ public class RotiRunner {
 			if (roti777 instanceof Kulcha) {
 				Kulcha cast12 = (Kulcha) roti777;
 				cast12.getType();
+				System.out.println("Type:" + type);
 			} else {
 				System.err.println("roti7 is exception");
 			}

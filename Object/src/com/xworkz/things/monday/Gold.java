@@ -1,4 +1,4 @@
-package com.xworkz.monday;
+package com.xworkz.things.monday;
 
 public class Gold {
 

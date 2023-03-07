@@ -1,6 +1,6 @@
-package com.xworkz.mondayRunner;
+package com.xworkz.boot.mondayRunner;
 
-import com.xworkz.monday.Paint;
+import com.xworkz.things.monday.Paint;
 
 public class PaintRunner {
 

@@ -1,4 +1,4 @@
-package com.xworkz.boot.equal;
+package com.xworkz.things.equal;
 
 public class Fish {
 
@@ -36,6 +36,7 @@ public class Fish {
 				if (left.type.equals(type) && (left.price == right.price) && (left.richMineral.equals(richMineral))
 						&& (left.size == right.size) && (left.length == right.length)) {
 					System.out.println("left is equal to right");
+					return true;
 				} else {
 					System.err.println("left is not equal to right");
 				}
@@ -46,7 +47,7 @@ public class Fish {
 			System.err.println("obj is null");
 		}
 
-		return true;
+		return false;
 	}
 
 	@Override

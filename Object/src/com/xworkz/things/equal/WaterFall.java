@@ -1,4 +1,4 @@
-package com.xworkz.boot.equal;
+package com.xworkz.things.equal;
 
 public class WaterFall {
 
@@ -32,6 +32,7 @@ public class WaterFall {
 
 				if (left.name.equals(name) && (left.height == right.height) && (left.location.equals(location))) {
 					System.out.println("left is  equal to right");
+					return true;
 				} else {
 					System.err.println("left is not equal to left");
 				}
@@ -41,7 +42,7 @@ public class WaterFall {
 		} else {
 			System.err.println("obj is null");
 		}
-		return true;
+		return false;
 	}
 
 	@Override

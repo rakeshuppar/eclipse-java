@@ -1,4 +1,4 @@
-package com.xworkz.boot.equal;
+package com.xworkz.things.equal;
 
 public class PoliceStation {
 
@@ -51,6 +51,7 @@ public class PoliceStation {
 						&& (left.cells == right.cells) && (left.thiefs == right.thiefs)
 						&& (left.parking == right.parking)) {
 					System.out.println("left is equal to right");
+					return true;
 				} else {
 					System.err.println("left is not equal to right");
 				}
@@ -61,7 +62,7 @@ public class PoliceStation {
 		} else {
 			System.err.println("obj is null");
 		}
-		return true;
+		return false;
 	}
 
 	@Override

@@ -1,6 +1,6 @@
 package com.xworkz.boot.equalRunner;
 
-import com.xworkz.boot.equal.ChiefMinister;
+import com.xworkz.things.equal.ChiefMinister;
 
 public class ChiefMininsterRunner {
 

@@ -1,6 +1,6 @@
 package com.xworkz.boot.equalRunner;
 
-import com.xworkz.boot.equal.FootWare;
+import com.xworkz.things.equal.FootWare;
 
 public class FootWareRunner {
 

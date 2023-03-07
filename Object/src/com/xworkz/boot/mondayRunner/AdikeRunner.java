@@ -1,6 +1,6 @@
-package com.xworkz.mondayRunner;
+package com.xworkz.boot.mondayRunner;
 
-import com.xworkz.monday.Adike;
+import com.xworkz.things.monday.Adike;
 
 public class AdikeRunner {
 
