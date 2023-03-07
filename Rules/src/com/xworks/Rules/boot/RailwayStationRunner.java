@@ -25,6 +25,10 @@ public class RailwayStationRunner {
 		boolean alcohol = station.drinksAlcohol();
 		System.out.println("drinksAlchohal:" + alcohol);
 
+		System.out.println(station.equals(station));
+		System.out.println(station.hashCode());
+		System.out.println(station.toString());
+
 		System.out.println("---------------------------");
 
 		Passenger pass = new Passenger();
@@ -45,9 +49,9 @@ public class RailwayStationRunner {
 		boolean alcohol1 = pass.drinksAlcohol();
 		System.out.println(alcohol1);
 
-		System.out.println(station.equals(pass));
-		System.out.println(station.hashCode());
-
+		System.out.println(pass.equals(pass));
+		System.out.println(pass.hashCode());
+		System.out.println(pass.toString());
 	}
 
 }

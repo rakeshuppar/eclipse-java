@@ -29,6 +29,10 @@ public class CodingRulesRunner {
 		String sec = rule.secure();
 		System.out.println("secure:" + sec);
 
+		System.out.println(rule.equals(rule));
+		System.out.println(rule.hashCode());
+		System.out.println(rule.toString());
+
 		System.out.println("----------------------------------");
 
 		Programmer pro = new Programmer();
@@ -53,8 +57,9 @@ public class CodingRulesRunner {
 		String sec1 = pro.secure();
 		System.out.println(sec1);
 
-		System.out.println(rule.equals(pro));
-		System.out.println(rule.hashCode());
+		System.out.println(pro.equals(pro));
+		System.out.println(pro.hashCode());
+		System.out.println(pro.toString());
 
 	}
 

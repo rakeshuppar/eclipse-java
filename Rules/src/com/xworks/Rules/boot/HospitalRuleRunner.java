@@ -29,6 +29,10 @@ public class HospitalRuleRunner {
 		String bag = rule.bags();
 		System.out.println("bags:" + bag);
 
+		System.out.println(rule.equals(rule));
+		System.out.println(rule.hashCode());
+		System.out.println(rule.toString());
+
 		System.out.println("--------------------------");
 
 		Public pub = new Public();
@@ -53,8 +57,9 @@ public class HospitalRuleRunner {
 		String bag1 = pub.bags();
 		System.out.println(bag1);
 
-		System.out.println(rule.equals(pub));
-		System.out.println(rule.hashCode());
+		System.out.println(pub.equals(pub));
+		System.out.println(pub.hashCode());
+		System.out.println(pub.toString());
 
 	}
 

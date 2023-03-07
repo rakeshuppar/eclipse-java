@@ -19,6 +19,10 @@ public class PubRunner {
 		boolean tip = rules.tips();
 		System.out.println("tips:" + tip);
 
+		System.out.println(rules.equals(rules));
+		System.out.println(rules.hashCode());
+		System.out.println(rules.toString());
+
 		System.out.println("-------------------------");
 
 		People p = new People();
@@ -33,8 +37,9 @@ public class PubRunner {
 		boolean tip1 = p.tips();
 		System.out.println(tip1);
 
-		System.out.println(rules.equals(p));
-		System.out.println(rules.hashCode());
+		System.out.println(p.equals(p));
+		System.out.println(p.hashCode());
+		System.out.println(p.toString());
 
 	}
 

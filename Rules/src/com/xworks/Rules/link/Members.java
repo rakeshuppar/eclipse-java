@@ -96,4 +96,12 @@ public class Members implements FamilyRules {
 		return "Pray together";
 	}
 
+	@Override
+	public String toString() {
+		System.out.println("running tostring in members");
+		return "Respect each other" + " Always tell truth to familymembers" + 9.00d + " Dont argue with family members"
+				+ true + 9.30d + true + 5 + " Make mistake and forgive each other" + " Sharing Work Each Other" + true
+				+ " Listen each other" + " Support each other" + " Use kind and polite words" + " Pray together";
+	}
+
 }

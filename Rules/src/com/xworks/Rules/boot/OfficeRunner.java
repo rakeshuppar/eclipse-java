@@ -16,6 +16,11 @@ public class OfficeRunner {
 
 		boolean hours = rules.minHours();
 		System.out.println("minimumhours:" + hours);
+
+		System.out.println(rules.equals(rules));
+		System.out.println(rules.hashCode());
+		System.out.println(rules.toString());
+
 		System.out.println(".......................................");
 
 		Rakesh rakesh = new Rakesh();
@@ -30,6 +35,7 @@ public class OfficeRunner {
 
 		System.out.println(rules.equals(rakesh));
 		System.out.println(rakesh.hashCode());
+		System.out.println(rakesh.toString());
 
 	}
 

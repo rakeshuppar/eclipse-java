@@ -66,4 +66,11 @@ public class Public implements HospitalRules {
 		return "Plastic bags are not allowed";
 	}
 
+	@Override
+	public String toString() {
+		System.out.println("running to string in public");
+		return "avoid noise in Hospital" + "one member stay with Patient" + "park at parking area only" + 2 + 9 + false
+				+ true + "Dont spill any liquid on floor" + 10.00d + "Plastic bags are not allowed";
+	}
+
 }

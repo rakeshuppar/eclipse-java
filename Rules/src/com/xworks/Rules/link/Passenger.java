@@ -54,4 +54,10 @@ public class Passenger implements RailwayStation {
 		return false;
 	}
 
+	@Override
+	public String toString() {
+		System.out.println("running to string in passenger ");
+		return false + "70" + "10pm to 6am" + true + 10 + true + false + false;
+	}
+
 }

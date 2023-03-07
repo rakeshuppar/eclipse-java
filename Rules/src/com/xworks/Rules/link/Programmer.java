@@ -67,4 +67,12 @@ public class Programmer implements CodingRules {
 		return "It cant be hacked";
 	}
 
+	@Override
+	public String toString() {
+		System.out.println("running to string in programmer");
+		return "Should be Upper case letters" + 100 + 5 + "descriptive names" + "Should be Uppercase letter" + true
+				+ "Should be lowercase letter" + "Should be lowercase letter" + "should surrounded by space character"
+				+ "It cant be hacked";
+	}
+
 }

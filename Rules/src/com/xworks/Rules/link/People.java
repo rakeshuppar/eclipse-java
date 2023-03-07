@@ -37,4 +37,10 @@ public class People implements PubRules {
 		return false;
 	}
 
+	@Override
+	public String toString() {
+		System.out.println("running to string in people");
+		return true + "11.30d" + true + 18 + false;
+	}
+
 }
