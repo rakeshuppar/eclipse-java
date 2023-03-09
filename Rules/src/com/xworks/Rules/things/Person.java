@@ -1,19 +1,9 @@
 package com.xworks.Rules.things;
 
-public class Person extends AbstractInfo implements PassportRule, Developer, DubaiVisaRule {
+public class Person implements PassportRule, DubaiVisaRule {
 
 	public Person() {
 		System.out.println("calling person with no arg constructor");
-	}
-
-	@Override
-	public boolean followStandards() {
-		return true;
-	}
-
-	@Override
-	public boolean understandingConcepts() {
-		return true;
 	}
 
 	@Override
@@ -45,6 +35,14 @@ public class Person extends AbstractInfo implements PassportRule, Developer, Dub
 	public int maxgoldLimit() {
 		return 50;
 
+	}
+
+	public boolean followStandards() {
+		return true;
+	}
+
+	public boolean understandingConcepts() {
+		return true;
 	}
 
 }

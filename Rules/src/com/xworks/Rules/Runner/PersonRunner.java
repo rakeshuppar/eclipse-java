@@ -31,8 +31,6 @@ public class PersonRunner {
 		boolean under = person.understandingConcepts();
 		System.out.println("understand Concept:" + under);
 
-		System.out.println(person.toString());
-
 		System.out.println("=============================");
 
 	}

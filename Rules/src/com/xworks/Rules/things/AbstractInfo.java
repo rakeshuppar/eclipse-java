@@ -1,24 +1,26 @@
 package com.xworks.Rules.things;
 
-public abstract class AbstractInfo {
+public abstract class AbstractInfo extends Developer {
 
 	private String createdBy;
 
 	private String updatedBy;
 
-	public AbstractInfo() {
-		System.out.println("calling AbstactInfo with no arg constructor");
+	public String setCreatedBy(String createdBy) {
+		return "SunMicrosystem";
 	}
 
-	public AbstractInfo(String createdBy, String updatedBy) {
-		this.createdBy = createdBy;
-		this.updatedBy = updatedBy;
+	public String setUpdatedBy(String updatedBy) {
+		return "Oracle";
 	}
 
 	@Override
-	public String toString() {
-		System.out.println("calling tostring in Abstact info");
-		return "SunMicrosystem" + " Oracle";
+	boolean followStandards() {
+		return true;
 	}
 
+	@Override
+	boolean understandingConcepts() {
+		return true;
+	}
 }

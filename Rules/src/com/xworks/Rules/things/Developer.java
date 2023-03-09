@@ -1,9 +1,9 @@
 package com.xworks.Rules.things;
 
-public interface Developer {
+public abstract class Developer {
 
-	boolean followStandards();
+	abstract boolean followStandards();
 
-	boolean understandingConcepts();
+	abstract boolean understandingConcepts();
 
 }
