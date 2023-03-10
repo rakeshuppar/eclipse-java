@@ -11,21 +11,26 @@ public class Person {
 	}
 
 	public void checkDelivery() {
-		String agent = this.delivery.agentName(3);
-		double time = this.delivery.timeTaken();
+		String agent = this.delivery.agentName(1);
+
 		double charge = this.delivery.charges();
+		System.out.println("charges:" + charge);
 
 		if (charge < 60) {
 			System.out.println("charges are ok");
 		} else {
 			System.out.println("charges are expensive");
 		}
+
+		double time = this.delivery.timeTaken();
+		System.out.println("Time taken:" + time);
+
 		if (time <= 30) {
 			System.out.println("ontime Delivery");
 		} else {
-			System.out.println("delayed delivery");
+			System.out.println("delayed Delivery");
 		}
-		System.out.println("agentname:" + agent);
+		System.out.println("Agent Name:" + agent);
 
 	}
 

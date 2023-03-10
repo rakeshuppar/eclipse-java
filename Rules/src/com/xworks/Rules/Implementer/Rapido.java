@@ -4,6 +4,10 @@ import com.xworks.Rules.Game.Delivery;
 
 public class Rapido implements Delivery {
 
+	public Rapido() {
+		System.out.println("Running rapido with no arg constructor");
+	}
+
 	@Override
 	public double charges() {
 		return 80;

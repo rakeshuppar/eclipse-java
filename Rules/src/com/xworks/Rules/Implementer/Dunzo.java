@@ -3,17 +3,20 @@ package com.xworks.Rules.Implementer;
 import com.xworks.Rules.Game.Delivery;
 
 public class Dunzo implements Delivery {
+	public Dunzo() {
+		System.out.println("Running Dunzo with no arg constructor");
+	}
 
 	@Override
 	public double charges() {
 
-		return 31;
+		return 50;
 	}
 
 	@Override
 	public double timeTaken() {
 
-		return 28;
+		return 30;
 	}
 
 	@Override
@@ -26,7 +29,7 @@ public class Dunzo implements Delivery {
 			return "Dinakara";
 		}
 		if (rating == 3) {
-			return "Shivu";
+			return "Kavan";
 		}
 
 		return null;
