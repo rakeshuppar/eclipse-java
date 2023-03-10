@@ -4,7 +4,7 @@ import com.xworks.Rules.Game.CricketRule;
 
 public class StreetCricket {
 
-	public CricketRule cricketRule;
+	private CricketRule cricketRule;
 
 	public StreetCricket(CricketRule cricketRule) {
 		this.cricketRule = cricketRule;
