@@ -9,12 +9,12 @@ public class CrickerRuleRunner {
 	public static void main(String[] args) {
 
 		CricketRule rule = new Player();
-		System.out.println("Captain:" + rule.captain());
-		System.out.println("Team:" + rule.team());
+		System.out.println("should be Captain:" + rule.shouldbeCaptain());
+		System.out.println("Number of players:" + rule.numPlayersshouldbe());
 
 		StreetCricket street = new StreetCricket(rule);
-		System.out.println("Captain:" + street.cricketRule.captain());
-		System.out.println("Team:" + street.cricketRule.team());
+		System.out.println("should be Captain:" + street.cricketRule.shouldbeCaptain());
+		System.out.println("Number of players:" + street.cricketRule.numPlayersshouldbe());
 
 	}
 

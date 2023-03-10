@@ -8,14 +8,15 @@ public class Player implements CricketRule {
 		System.out.println("no arg constructer in Player");
 	}
 
-	@Override
-	public String team() {
-		return "India";
+@Override 
+	public boolean shouldbeCaptain() {
+		return true;
 	}
 
+
 	@Override
-	public String captain() {
-		return "Rohit Sharma";
+	public int numPlayersshouldbe() {
+		return 11;
 	}
 
 	}
