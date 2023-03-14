@@ -3,6 +3,8 @@ package com.xworkz.application.dtoRunner;
 import java.time.LocalDate;
 
 import com.xworkz.application.dto.ApplicationDTO;
+import com.xworkz.application.implement.ApplicationImp;
+import com.xworkz.application.service.ApplicationService;
 
 public class ApplicationDTORunner {
 
@@ -19,6 +21,10 @@ public class ApplicationDTORunner {
 		System.out.println(application);
 		System.out.println(
 				"hashcode:" + application.hashCode() + "  originalhashcode:" + System.identityHashCode(application));
-	}
 
+		ApplicationService service = new ApplicationImp();
+		boolean saved = service.validThenSave(application);
+		System.out.println("service:" + saved);
+
+	}
 }
