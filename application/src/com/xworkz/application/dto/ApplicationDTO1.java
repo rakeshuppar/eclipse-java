@@ -4,6 +4,10 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Objects;
 
+import com.xworkz.application.constants.application1.LangaugeUsed;
+import com.xworkz.application.constants.application1.OsTypeSupported;
+import com.xworkz.application.constants.application1.Type;
+
 public class ApplicationDTO1 implements Serializable {
 
 	private String name;
@@ -11,20 +15,20 @@ public class ApplicationDTO1 implements Serializable {
 	private LocalDate createDate;
 	private int size;
 	private String developedBy;
-	private String type;
+	private Type type;
 	private double price;
 	private LocalDate firstVersionReleaseDate;
 	private LocalDate currentVersionReleaseDate;
 	private LocalDate nextVersionReleaseDate;
 	private int trailDays;
-	private String languageUsed;
+	private LangaugeUsed languageUsed;
 	private double minProcessorSpeed;
 	private double minramSpeedRequired;
 	private boolean internetNeeded;
 	private int ageLimit;
 	private double numDownloads;
 	private float ratings;
-	private String osTypeSupported;
+	private OsTypeSupported osTypeSupported;
 
 	public String getName() {
 		return name;
@@ -66,11 +70,11 @@ public class ApplicationDTO1 implements Serializable {
 		this.developedBy = developedBy;
 	}
 
-	public String getType() {
+	public Type getType() {
 		return type;
 	}
 
-	public void setType(String type) {
+	public void setType(Type type) {
 		this.type = type;
 	}
 
@@ -114,11 +118,11 @@ public class ApplicationDTO1 implements Serializable {
 		this.trailDays = trailDays;
 	}
 
-	public String getLanguageUsed() {
+	public LangaugeUsed getLanguageUsed() {
 		return languageUsed;
 	}
 
-	public void setLanguageUsed(String languageUsed) {
+	public void setLanguageUsed(LangaugeUsed languageUsed) {
 		this.languageUsed = languageUsed;
 	}
 
@@ -170,11 +174,11 @@ public class ApplicationDTO1 implements Serializable {
 		this.ratings = ratings;
 	}
 
-	public String getOsTypeSupported() {
+	public OsTypeSupported getOsTypeSupported() {
 		return osTypeSupported;
 	}
 
-	public void setOsTypeSupported(String osTypeSupported) {
+	public void setOsTypeSupported(OsTypeSupported osTypeSupported) {
 		this.osTypeSupported = osTypeSupported;
 	}
 

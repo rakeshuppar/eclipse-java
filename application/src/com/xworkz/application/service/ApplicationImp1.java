@@ -1,12 +1,11 @@
-package com.xworkz.application.implement;
+package com.xworkz.application.service;
 
 import java.time.LocalDate;
 
 import com.xworkz.application.dto.ApplicationDTO1;
-import com.xworkz.application.implement.fixed.LangaugeUsed;
-import com.xworkz.application.implement.fixed.OsTypeSupported;
-import com.xworkz.application.implement.fixed.Type;
-import com.xworkz.application.service.ApplicationService1;
+import com.xworkz.application.constants.application1.LangaugeUsed;
+import com.xworkz.application.constants.application1.OsTypeSupported;
+import com.xworkz.application.constants.application1.Type;
 
 public class ApplicationImp1 implements ApplicationService1 {
 
@@ -14,24 +13,27 @@ public class ApplicationImp1 implements ApplicationService1 {
 	public boolean validThenSave(ApplicationDTO1 dto) {
 
 		if (dto != null) {
-			System.out.println("dto is not null will valid the properties");
+			System.out.println("dto is not null will,valid the properties");
 
 			String name = dto.getName();
 			double ver = dto.getVersion();
 			LocalDate date = dto.getCreateDate();
 			int si = dto.getSize();
+			Type type = dto.getType();
 			String develop = dto.getDevelopedBy();
 			double pri = dto.getPrice();
 			LocalDate date1 = dto.getFirstVersionReleaseDate();
 			LocalDate date2 = dto.getCurrentVersionReleaseDate();
 			LocalDate date3 = dto.getNextVersionReleaseDate();
 			int days = dto.getTrailDays();
+			LangaugeUsed used = dto.getLanguageUsed();
 			double minp = dto.getMinProcessorSpeed();
 			double minr = dto.getMinRamSpeedRequired();
 			boolean inter = dto.isInternetNeeded();
 			int age = dto.getAgeLimit();
 			double down = dto.getNumDownloads();
 			float rate = dto.getRatings();
+			OsTypeSupported os = dto.getOsTypeSupported();
 
 			boolean validName = false;
 			boolean validVersion = false;
@@ -69,8 +71,9 @@ public class ApplicationImp1 implements ApplicationService1 {
 			}
 
 			LocalDate today = LocalDate.now();
+			LocalDate past = LocalDate.of(2002, 6, 6);
 
-			if (date != null && date.isBefore(today)) {
+			if (date != null && date.isBefore(today) && date.isAfter(past)) {
 				System.out.println("Created Date is Valid");
 				validCreateDate = true;
 			} else {
@@ -84,10 +87,7 @@ public class ApplicationImp1 implements ApplicationService1 {
 				System.err.println("size is invalid");
 			}
 
-			Type type1 = Type.SOCIALMEDIAAPP;
-			System.out.println("Type of App:" + type1);
-
-			if (type1 != null) {
+			if (type != null) {
 				System.out.println("Type is valid");
 				validType = true;
 
@@ -111,31 +111,32 @@ public class ApplicationImp1 implements ApplicationService1 {
 			}
 
 			LocalDate today1 = LocalDate.now();
+			LocalDate past1 = LocalDate.of(2005, 5, 6);
 
-			if (date1 != null && date1.isBefore(today1)) {
-				System.out.println("FirstVersionReleaseDate is valid ");
+			if (date1 != null && date1.isBefore(today1) && date1.isAfter(past)) {
+				System.out.println("First Version Release Date is valid ");
 				validFirstVersionReleaseDate = true;
 			} else {
-				System.err.println("FirstVersionReleaseDate is invalid ");
+				System.err.println("First Version Release Date is invalid ");
 			}
 
 			LocalDate today2 = LocalDate.now();
 			LocalDate startDate2 = LocalDate.of(2016, 2, 21);
 
 			if (date2 != null && date2.isBefore(today2) && date2.isAfter(startDate2)) {
-				System.out.println("CurrentVersionReleaseDate is valid Date");
+				System.out.println("Current Version Release Date is valid");
 				validCurrentVersionReleaseDate = true;
 			} else {
-				System.err.println("CurrentVersionReleaseDate is invalid ");
+				System.err.println("Current Version Release Date is invalid ");
 			}
 			LocalDate today3 = LocalDate.now();
 			LocalDate startDate3 = LocalDate.of(2025, 2, 21);
 
 			if (date3 != null && date3.isBefore(startDate3) && date3.isAfter(today3)) {
-				System.out.println("NextVersionReleaseDate is valid ");
+				System.out.println("Next Version Release Date is valid ");
 				validNextVersionReleaseDate = true;
 			} else {
-				System.err.println("NextVersionReleaseDate is invalid ");
+				System.err.println("Next Version Release Date is invalid ");
 			}
 
 			if (days > 0 && days < 100) {
@@ -145,10 +146,7 @@ public class ApplicationImp1 implements ApplicationService1 {
 				System.err.println("Trial days  is invalid");
 			}
 
-			LangaugeUsed lan1 = LangaugeUsed.JAVA;
-			System.out.println("Langauage Used:" + lan1);
-
-			if (lan1 != null) {
+			if (used != null) {
 				System.out.println("Langauge Used is valid");
 				validLanguageUsed = true;
 
@@ -198,20 +196,30 @@ public class ApplicationImp1 implements ApplicationService1 {
 			} else {
 				System.err.println("Ratings is invalid");
 			}
-			OsTypeSupported os1 = OsTypeSupported.WINDOWS;
-			System.out.println("Opertaing System Supported:" + os1);
 
-			if (os1 != null) {
+			if (os != null) {
 				System.out.println("Operating System Supported is valid");
 				validOsTypeSupported = true;
 
 			} else {
 				System.err.println("Os Type Supported  is invalid");
 			}
-			return true;
+
+			if (validName && validVersion && validCreateDate && validSize && validDevelopedBy && validType && validPrice
+					&& validFirstVersionReleaseDate && validCurrentVersionReleaseDate && validNextVersionReleaseDate
+					&& validTrailDays && validLanguageUsed && validMinProcessorSpeed && validMinramSpeedRequired
+					&& validInternetNeeded && validAgeLimit && validNumDownloads && validRatings
+					&& validOsTypeSupported) {
+				System.out.println("valid and Then Save");
+				return true;
+			} else {
+				System.err.println("not valid");
+			}
+
+			return false;
 		} else {
 			System.err.println("dto is null, Will not valid the properties");
 		}
-		return true;
+		return false;
 	}
 }
