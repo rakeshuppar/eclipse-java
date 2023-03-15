@@ -145,7 +145,7 @@ public class ApplicationImp1 implements ApplicationService1 {
 				System.err.println("Trial days  is invalid");
 			}
 
-			LangaugeUsed lan1 = LangaugeUsed.ENGLISH;
+			LangaugeUsed lan1 = LangaugeUsed.JAVA;
 			System.out.println("Langauage Used:" + lan1);
 
 			if (lan1 != null) {

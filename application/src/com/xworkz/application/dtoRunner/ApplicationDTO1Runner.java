@@ -22,7 +22,7 @@ public class ApplicationDTO1Runner {
 		app.setCurrentVersionReleaseDate(LocalDate.of(2018, 9, 22));
 		app.setNextVersionReleaseDate(LocalDate.of(2024, 7, 8));
 		app.setTrailDays(30);
-		app.setLanguageUsed("ENGLISH");
+		app.setLanguageUsed("JAVA");
 		app.setMinProcessorSpeed(88);
 		app.setRamSpeedRequired(99);
 		app.setInternetNeeded(true);
