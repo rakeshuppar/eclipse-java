@@ -3,11 +3,18 @@ package com.xworkz.application.service;
 import java.time.LocalDate;
 
 import com.xworkz.application.dto.ApplicationDTO1;
+import com.xworkz.application.repository.Application1Repository;
 import com.xworkz.application.constants.application1.LangaugeUsed;
 import com.xworkz.application.constants.application1.OsTypeSupported;
 import com.xworkz.application.constants.application1.Type;
 
-public class ApplicationImp1 implements ApplicationService1 {
+public class ApplicationServiceImp1 implements ApplicationService1 {
+
+	private Application1Repository repo;
+
+	public ApplicationServiceImp1(Application1Repository repo) {
+		this.repo = repo;
+	}
 
 	@Override
 	public boolean validThenSave(ApplicationDTO1 dto) {
@@ -210,13 +217,12 @@ public class ApplicationImp1 implements ApplicationService1 {
 					&& validTrailDays && validLanguageUsed && validMinProcessorSpeed && validMinramSpeedRequired
 					&& validInternetNeeded && validAgeLimit && validNumDownloads && validRatings
 					&& validOsTypeSupported) {
-				System.out.println("valid and Then Save");
-				return true;
-			} else {
-				System.err.println("not valid");
-			}
-
-			return false;
+				boolean save=this.repo.save(dto);
+				return save;
+			}else {
+				System.err.println("not valid data");
+				return false;
+			} 
 		} else {
 			System.err.println("dto is null, Will not valid the properties");
 		}

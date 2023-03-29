@@ -29,6 +29,37 @@ public class ApplicationDTO1 implements Serializable {
 	private double numDownloads;
 	private float ratings;
 	private OsTypeSupported osTypeSupported;
+	
+	public ApplicationDTO1() {
+		System.out.println("running no arg constructor in ApplicationDTO1");
+	}
+
+	public ApplicationDTO1(String name, double version, LocalDate createDate, int size, String developedBy, Type type,
+			double price, LocalDate firstVersionReleaseDate, LocalDate currentVersionReleaseDate,
+			LocalDate nextVersionReleaseDate, int trailDays, LangaugeUsed languageUsed, double minProcessorSpeed,
+			double minramSpeedRequired, boolean internetNeeded, int ageLimit, double numDownloads, float ratings,
+			OsTypeSupported osTypeSupported) {
+		super();
+		this.name = name;
+		this.version = version;
+		this.createDate = createDate;
+		this.size = size;
+		this.developedBy = developedBy;
+		this.type = type;
+		this.price = price;
+		this.firstVersionReleaseDate = firstVersionReleaseDate;
+		this.currentVersionReleaseDate = currentVersionReleaseDate;
+		this.nextVersionReleaseDate = nextVersionReleaseDate;
+		this.trailDays = trailDays;
+		this.languageUsed = languageUsed;
+		this.minProcessorSpeed = minProcessorSpeed;
+		this.minramSpeedRequired = minramSpeedRequired;
+		this.internetNeeded = internetNeeded;
+		this.ageLimit = ageLimit;
+		this.numDownloads = numDownloads;
+		this.ratings = ratings;
+		this.osTypeSupported = osTypeSupported;
+	}
 
 	public String getName() {
 		return name;

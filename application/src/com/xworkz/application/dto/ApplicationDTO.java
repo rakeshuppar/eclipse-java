@@ -16,6 +16,18 @@ public class ApplicationDTO implements Serializable {
 		System.out.println("Running no arg constructor in ApplicationDTO");
 	}
 
+	public ApplicationDTO(String name, double version, String developedBy, int size, LocalDate createdDate) {
+		super();
+		this.name = name;
+		this.version = version;
+		this.developedBy = developedBy;
+		this.size = size;
+		this.createdDate = createdDate;
+	}
+
+
+
+
 	public String getName() {
 		return name;
 	}

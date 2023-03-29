@@ -4,6 +4,6 @@ import com.xworkz.application.dto.HeadphoneDTO;
 
 public interface HeadphoneService {
 
-	boolean validThenSave(HeadphoneDTO head);
+	public boolean validThenSave(HeadphoneDTO head);
 
 }

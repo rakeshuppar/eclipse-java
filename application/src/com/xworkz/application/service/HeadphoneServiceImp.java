@@ -1,20 +1,29 @@
 package com.xworkz.application.service;
 
-import static com.xworkz.application.utility.HeadphoneUtility.*;
+import static com.xworkz.application.util.HeadphoneUtility.*;
 
 import java.time.LocalDate;
 
 import com.xworkz.application.constants.Headphone.*;
 import com.xworkz.application.dto.HeadphoneDTO;
+import com.xworkz.application.repository.HeadphoneRepoImp;
+import com.xworkz.application.repository.HeadphoneRepository;
+import com.xworkz.application.util.HeadphoneUtility;
 
-public class HeadphoneImp implements HeadphoneService {
+public class HeadphoneServiceImp implements HeadphoneService {
+
+	private HeadphoneRepository repo;
+
+	public HeadphoneServiceImp(HeadphoneRepository repo) {
+		this.repo = repo;
+	}
 
 	@Override
 	public boolean validThenSave(HeadphoneDTO head) {
-		System.out.println("running valid Then Save in Haedphone Imp");
+		System.out.println("Running valid Then Save in Haedphone Imp");
 
 		if (head != null) {
-			System.out.println("HeadPhone is not null,Valid The propertes");
+			System.out.println("HeadPhone is not null,Valid The properties");
 
 			Brand brand = head.getBrand();
 			String model = head.getModelNum();
@@ -94,7 +103,7 @@ public class HeadphoneImp implements HeadphoneService {
 				System.err.println("invalid invoice");
 			}
 
-			if (validDate(date, date)) {
+			if(validDate(date, date)) {
 				System.out.println("valid date");
 				validDate = true;
 			} else {
@@ -110,12 +119,17 @@ public class HeadphoneImp implements HeadphoneService {
 
 			if (validFlag(validBrand, validModelNumber, validPrice, validBass, validColour, validTypeAndWeight,
 					validCustomerName, validInvoice, validDate, validWarrentyPeriod)) {
-				System.out.println("All properties are valid and Then save");
-				return true;
+
+				System.out.println("All properties are valid and Then save data");
+				boolean save = this.repo.save(head);
+				return save;
 			} else {
-				System.err.println("not valid");
+				System.err.println("not valid data");
+				return false;
 			}
-			return false;
+		} 
+		else {
+			System.err.println("dto is not null");
 
 		}
 		return false;

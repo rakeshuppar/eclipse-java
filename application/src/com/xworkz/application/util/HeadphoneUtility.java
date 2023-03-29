@@ -1,4 +1,4 @@
-package com.xworkz.application.utility;
+package com.xworkz.application.util;
 
 import java.time.LocalDate;
 
@@ -35,8 +35,8 @@ public class HeadphoneUtility {
 
 	public static boolean validDate(LocalDate date, LocalDate past) {
 
-		LocalDate tomarrow = date.now().plusDays(1);
-		LocalDate past1= date.of(2015, 6, 6);
+		LocalDate tomarrow = LocalDate.now().plusDays(1);
+		LocalDate past1= LocalDate.of(2015, 6, 6);
 
 		if (date != null && date.isBefore(tomarrow) && date.isAfter(past1)) {
 			return true;
@@ -50,11 +50,11 @@ public class HeadphoneUtility {
 		for (int index = 0; index < flag.length; index++) {
 			boolean temp = flag[index];
 
-			if (temp) {
-				return true;
+			if (!temp) {
+				return false;
 			}
 		}
-		return false;
+		return true;
 
 	}
 
