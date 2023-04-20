@@ -1,14 +1,13 @@
 package com.xworkz.application.service;
 
-import static com.xworkz.application.util.HeadphoneUtility.*;
-
 import java.time.LocalDate;
 
 import com.xworkz.application.constants.Headphone.*;
 import com.xworkz.application.dto.HeadphoneDTO;
+import com.xworkz.application.exception.InvalidFestivalException;
 import com.xworkz.application.repository.HeadphoneRepoImp;
 import com.xworkz.application.repository.HeadphoneRepository;
-import com.xworkz.application.util.HeadphoneUtility;
+import com.xworkz.application.util.HeadphoneUtil;
 
 public class HeadphoneServiceImp implements HeadphoneService {
 
@@ -19,7 +18,7 @@ public class HeadphoneServiceImp implements HeadphoneService {
 	}
 
 	@Override
-	public boolean validThenSave(HeadphoneDTO head) {
+	public boolean validThenSave(HeadphoneDTO head) throws InvalidFestivalException {
 		System.out.println("Running valid Then Save in Haedphone Imp");
 
 		if (head != null) {
@@ -54,14 +53,14 @@ public class HeadphoneServiceImp implements HeadphoneService {
 				System.err.println("invalid brand");
 			}
 
-			if (validString(model)) {
+			if (HeadphoneUtil.validString(model)) {
 				System.out.println("valid model");
 				validModelNumber = true;
 			} else {
 				System.err.println("invalid model");
 			}
 
-			if (validNumbers(price)) {
+			if (HeadphoneUtil.validNumbers(price)) {
 				System.out.println("valid Price");
 				validPrice = true;
 			} else {
@@ -89,35 +88,35 @@ public class HeadphoneServiceImp implements HeadphoneService {
 				System.out.println("invalid Type and Weight");
 			}
 
-			if (validString(customer)) {
+			if (HeadphoneUtil.validString(customer)) {
 				System.out.println("valid Customer");
 				validCustomerName = true;
 			} else {
 				System.err.println("invalid Customer");
 			}
 
-			if (validNumber(invoice)) {
+			if (HeadphoneUtil.validNumber(invoice)) {
 				System.out.println("valid invoice");
 				validInvoice = true;
 			} else {
 				System.err.println("invalid invoice");
 			}
 
-			if(validDate(date, date)) {
+			if(HeadphoneUtil.validDate(date, date)) {
 				System.out.println("valid date");
 				validDate = true;
 			} else {
 				System.err.println("invalid date");
 			}
 
-			if (validNumber(warranty)) {
+			if (HeadphoneUtil.validNumber(warranty)) {
 				System.out.println("valid warrenty");
 				validWarrentyPeriod = true;
 			} else {
 				System.err.println("invalid warrenty");
 			}
 
-			if (validFlag(validBrand, validModelNumber, validPrice, validBass, validColour, validTypeAndWeight,
+			if (HeadphoneUtil.validFlag(validBrand, validModelNumber, validPrice, validBass, validColour, validTypeAndWeight,
 					validCustomerName, validInvoice, validDate, validWarrentyPeriod)) {
 
 				System.out.println("All properties are valid and Then save data");
@@ -125,11 +124,11 @@ public class HeadphoneServiceImp implements HeadphoneService {
 				return save;
 			} else {
 				System.err.println("not valid data");
-				return false;
+				throw new InvalidFestivalException("Invalid Exception is by InvalidFestivalException, Data terminate"); 
 			}
 		} 
 		else {
-			System.err.println("dto is not null");
+			System.err.println("dto is  null");
 
 		}
 		return false;

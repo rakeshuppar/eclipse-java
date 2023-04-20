@@ -3,6 +3,7 @@ package com.xworkz.application.service;
 import java.time.LocalDate;
 
 import com.xworkz.application.dto.ApplicationDTO1;
+import com.xworkz.application.exception.InvalidFestivalException;
 import com.xworkz.application.repository.Application1Repository;
 import com.xworkz.application.constants.application1.LangaugeUsed;
 import com.xworkz.application.constants.application1.OsTypeSupported;
@@ -17,7 +18,7 @@ public class ApplicationServiceImp1 implements ApplicationService1 {
 	}
 
 	@Override
-	public boolean validThenSave(ApplicationDTO1 dto) {
+	public boolean validThenSave(ApplicationDTO1 dto) throws InvalidFestivalException {
 
 		if (dto != null) {
 			System.out.println("dto is not null will,valid the properties");
@@ -120,7 +121,7 @@ public class ApplicationServiceImp1 implements ApplicationService1 {
 			LocalDate today1 = LocalDate.now();
 			LocalDate past1 = LocalDate.of(2005, 5, 6);
 
-			if (date1 != null && date1.isBefore(today1) && date1.isAfter(past)) {
+			if (date1 != null && date1.isBefore(today1) && date1.isAfter(past1)) {
 				System.out.println("First Version Release Date is valid ");
 				validFirstVersionReleaseDate = true;
 			} else {
@@ -217,14 +218,12 @@ public class ApplicationServiceImp1 implements ApplicationService1 {
 					&& validTrailDays && validLanguageUsed && validMinProcessorSpeed && validMinramSpeedRequired
 					&& validInternetNeeded && validAgeLimit && validNumDownloads && validRatings
 					&& validOsTypeSupported) {
-				boolean save=this.repo.save(dto);
+				boolean save = this.repo.save(dto);
 				return save;
-			}else {
+			} else {
 				System.err.println("not valid data");
-				return false;
-			} 
-		} else {
-			System.err.println("dto is null, Will not valid the properties");
+				throw new InvalidFestivalException("Invalid Exception is by InvalidFestivalException, Data terminate");
+			}
 		}
 		return false;
 	}

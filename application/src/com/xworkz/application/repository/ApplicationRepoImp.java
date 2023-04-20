@@ -1,6 +1,7 @@
 package com.xworkz.application.repository;
 
 import com.xworkz.application.dto.ApplicationDTO;
+import com.xworkz.application.exception.FestivalMemoryFullException;
 
 public class ApplicationRepoImp implements ApplicationRepository {
 
@@ -17,7 +18,7 @@ public class ApplicationRepoImp implements ApplicationRepository {
 			return true;
 		} else {
 			System.err.println("memory is full,cannot add more files,maximum allow");
-			return false;
+			throw new FestivalMemoryFullException("Memory Full Exception is Handled by FestivalMemoryFullException, Will terminate");
 		}
 		
 	}

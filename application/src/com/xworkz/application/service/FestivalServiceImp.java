@@ -82,18 +82,31 @@ public class FestivalServiceImp implements FestivalService {
 			}
 
 			if (validId && validName && validStartDate && validEndDate && validSweet && validGodName) {
-				System.out.println("valid data Then save");
-				boolean save = this.repo.save(dto);
-				return save;
-			} else {
-				System.err.println("invalid data");
-				throw new InvalidFestivalException("handle the exception");
+				System.out.println("complete save all the data");
+				boolean exists = this.repo.isExist(dto);
+				if (!exists) {
+					boolean save = this.repo.save(dto);
+					return save;
+				} else {
+					System.err.println("dto is exists");
+					throw new InvalidFestivalException(
+							"Invalid Exception is by InvalidFestivalException, Data terminate");
+
+				}
+
 			}
 
 		} else {
 			System.err.println("dto is null");
 		}
 		return false;
+	}
+
+	@Override
+	public boolean isExist(FestivalDTO dto) throws InvalidFestivalException {
+		if (validThenSave(dto))
+			;
+		return FestivalService.super.isExist(dto);
 	}
 
 }

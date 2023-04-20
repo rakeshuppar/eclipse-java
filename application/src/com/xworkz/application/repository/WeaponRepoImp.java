@@ -1,6 +1,7 @@
 package com.xworkz.application.repository;
 
 import com.xworkz.application.dto.WeaponDTO;
+import com.xworkz.application.exception.FestivalMemoryFullException;
 
 public class WeaponRepoImp implements WeaponRepository {
 
@@ -13,11 +14,12 @@ public class WeaponRepoImp implements WeaponRepository {
 
 		if (this.weaindex < this.wea.length) {
 			this.wea[weaindex] = dto;
+			System.out.println("repo is saved at index:" + this.weaindex + " " + dto);
 			weaindex++;
 			return true;
 		} else {
 			System.err.println("memory is full,cannot add more files,maximum allow");
-			return false;
+			throw new FestivalMemoryFullException("Memory Full Exception is Handled by FestivalMemoryFullException, Will terminate");
 		}
 
 	}

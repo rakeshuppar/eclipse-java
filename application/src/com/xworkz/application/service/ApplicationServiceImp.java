@@ -2,9 +2,8 @@ package com.xworkz.application.service;
 
 import java.time.LocalDate;
 import com.xworkz.application.dto.ApplicationDTO;
-import com.xworkz.application.dto.ApplicationDTO1;
+import com.xworkz.application.exception.InvalidFestivalException;
 import com.xworkz.application.repository.ApplicationRepository;
-import com.xworkz.application.service.ApplicationService;
 
 public class ApplicationServiceImp implements ApplicationService {
 	
@@ -14,7 +13,7 @@ public class ApplicationServiceImp implements ApplicationService {
 		this.repo=repo;
 	}
 	@Override
-	public boolean validThenSave(ApplicationDTO dto) {
+	public boolean validThenSave(ApplicationDTO dto) throws InvalidFestivalException {
 		System.out.println("Running Valid Then Save in ApplicationImp");
 
 		if (dto != null) {
@@ -76,7 +75,7 @@ public class ApplicationServiceImp implements ApplicationService {
 				return save;
 			} else {
 				System.err.println("not valid data");
-				return false;
+				throw new InvalidFestivalException("Invalid Exception is by InvalidFestivalException, Data terminate");
 			}
 			
 		} else {

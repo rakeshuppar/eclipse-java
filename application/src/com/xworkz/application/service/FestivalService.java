@@ -7,4 +7,13 @@ public interface FestivalService {
 
 	public boolean validThenSave(FestivalDTO dto) throws InvalidFestivalException;
 
+	default int getTotal() {
+		return 0;
+	}
+
+	default boolean isExist(FestivalDTO dto) throws InvalidFestivalException {
+		return false;
+
+	}
+
 }

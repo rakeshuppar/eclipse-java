@@ -1,6 +1,7 @@
 package com.xworkz.application.repository;
 
 import com.xworkz.application.dto.HeadphoneDTO;
+import com.xworkz.application.exception.FestivalMemoryFullException;
 
 public class HeadphoneRepoImp implements HeadphoneRepository {
 
@@ -13,11 +14,12 @@ public class HeadphoneRepoImp implements HeadphoneRepository {
 
 		if (this.headsindex < this.heads.length) {
 			this.heads[headsindex] = dto;
+			System.out.println("repo is saved at index:" + this.headsindex + " " + dto);
 			this.headsindex++;
 			return true;
 		} else {
 			System.err.println("memory is full,cannot add more files,maximum allow");
-			return false;
+			throw new FestivalMemoryFullException("Memory Full Exception is Handled by FestivalMemoryFullException, Will terminate");
 		}
 
 	}

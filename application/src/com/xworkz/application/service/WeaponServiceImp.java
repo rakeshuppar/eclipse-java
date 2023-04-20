@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 import com.xworkz.application.constants.weapon.Type;
 import com.xworkz.application.dto.WeaponDTO;
-import com.xworkz.application.repository.WeaponRepoImp;
+import com.xworkz.application.exception.InvalidFestivalException;
 import com.xworkz.application.repository.WeaponRepository;
 
 public class WeaponServiceImp implements WeaponService {
@@ -15,7 +15,7 @@ public class WeaponServiceImp implements WeaponService {
 		this.repo= repo;
 	}
 	@Override
-	public boolean validAndSave(WeaponDTO dto) {
+	public boolean validAndSave(WeaponDTO dto) throws InvalidFestivalException {
 		System.out.println("Running Valid and Save in Weapon Implementation");
 
 		if (dto != null) {
@@ -135,8 +135,8 @@ public class WeaponServiceImp implements WeaponService {
 				return save;
 			} else {
 				System.err.println("invalid");
+				throw new InvalidFestivalException("Invalid Exception is by InvalidFestivalException, Data terminate");
 			}
-			return false;
 
 		} else {
 			System.err.println("dto is null");
