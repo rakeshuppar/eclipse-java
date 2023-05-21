@@ -1,4 +1,4 @@
-package com.xworkz.connection;
+package com.xworkz.connection.write;
 
 import java.sql.Statement;
 import java.sql.Connection;

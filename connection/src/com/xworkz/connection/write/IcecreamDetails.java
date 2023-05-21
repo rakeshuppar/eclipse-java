@@ -17,6 +17,7 @@ public class IcecreamDetails {
 					"2lb16cv033");
 
 			System.out.println("creating query");
+
 			String query = "insert into icecream values(4,'Vanila',30.0)";
 			System.out.println(query);
 
