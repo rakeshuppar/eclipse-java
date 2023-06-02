@@ -1,0 +1,13 @@
+@charset "ISO-8859-1";
+
+body{
+	
+	text-align: center;
+	background-image: url(https://img.freepik.com/premium-photo/drawing-abstract-architectural-white-interior-from-array-cubes-with-large-windows-3d_689904-58241.jpg);	
+}
+
+form{
+	text-align : center;
+	margin:200px;
+	border-style: ridge; 	
+}

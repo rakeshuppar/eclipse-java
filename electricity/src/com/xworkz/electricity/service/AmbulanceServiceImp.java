@@ -28,7 +28,7 @@ public class AmbulanceServiceImp implements AmbulanceService {
 
 			Validator validate = factory.getValidator();
 
-			Set<ConstraintViolation<AmbulanceDTO>> constraintViolation = validate.validate(dto);
+	        Set<ConstraintViolation<AmbulanceDTO>> constraintViolation = validate.validate(dto);
 			if (constraintViolation != null && !constraintViolation.isEmpty()) {
 				System.err.println("num of constraints:" + constraintViolation.size());
 				constraintViolation.forEach(cv -> System.out.println(cv.getPropertyPath() + " " + cv.getMessage()));

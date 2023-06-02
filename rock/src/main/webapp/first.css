@@ -1,0 +1,12 @@
+@charset "ISO-8859-1";
+
+body{
+	text-align: center;
+	background-image: url("https://wallpapers.com/images/hd/minimal-background-lqr0xjiwiwdygix8.jpg");
+}
+
+form{	
+	text-align: center;
+	margin:150px;
+	border-style: ridge;
+}

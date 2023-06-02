@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @WebServlet(loadOnStartup = 1,urlPatterns = "/fav")
 public class FavouriteServlet extends HttpServlet{
@@ -31,13 +32,16 @@ public class FavouriteServlet extends HttpServlet{
 	    laptops[1]="LENOVO";
 	    laptops[2]="DWELL";
 	    
+	    HttpSession session = req.getSession();
+	    session.setAttribute("laptop",laptops);
+	    
+	    
 	    req.setAttribute("laptop0", laptops[0]);
 	    req.setAttribute("laptop1", laptops[1]);
 	    req.setAttribute("laptop2", laptops[2]);
        
-	    
-	   RequestDispatcher request=req.getRequestDispatcher("InfoDisplay.jsp");
-	   request.forward(req, resp);
+	    RequestDispatcher request=req.getRequestDispatcher("InfoDisplay.jsp");
+	    request.forward(req, resp);
 	}
 
 	

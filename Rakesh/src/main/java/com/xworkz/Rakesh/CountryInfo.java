@@ -27,8 +27,8 @@ public class CountryInfo extends HttpServlet {
 		
 		System.out.println("CountryName:" +ref+" "+ " CountryCode:" +ref1+" "+" CountryCapital:"+ ref2+" "+" CountryPopulation:"+ref3);
 		
-		String ref4=req.getParameter("PMname");
-		System.out.println("PmName:"+ref4);
+		//String ref4=req.getParameter("PMname");
+		//System.out.println("PmName:"+ref4);
 	
 		System.out.println("========================================");
 

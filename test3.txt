@@ -1,0 +1,99 @@
+
+
+1. 
+  1.public static void main(){String[] args}
+
+ public=It is access specifier, we can accesss class from same or different packages;
+ static=It is non access specifier 
+ void- cant return any value
+ main - it is a method
+ {String[] args}= command line arguement in the string form;
+
+
+ 2. Class=It is blue print of an object,We create class with Class Keyword
+         Class is a keyword
+         It logical entity,It does not exist in the real world. 
+         we can store the states and behaviour,
+         class is also datatype
+
+  Object=It is real world entity,It exist in the real world,It is having properies like States and behaviour.
+         
+
+  3.JVM=Java Virtual Machine
+    The main function of jvm is it is an interpreter which convert byte code to machine code.
+    it provides runtime environment to execute bytecode
+    
+  JRE=Java Runtime Environmen
+    To execute byte code minimun Jre required ;
+    It contains JVM and development tools
+  JDK=JAva Development Kit
+     It is software kit which contains JDk+set of libraries.
+
+
+4.Constructor;
+    It is special type of method which is use to initialize the objects.
+    It doesnot have return type;
+    It is same as classname.
+    
+  Tyes of constructor
+
+  Default constructor:
+  If there is  no constructor available in the class java compiler provides  default constructor by
+  default is called Default constructor.
+
+  Parameterized Constructor:
+  It is also type of constructor in which it having parameters is called Parameterized Constructor.
+
+
+5.
+this keyword=It refering to current object,the this keyword is in the scope of the that class only;
+   
+this()= It refering to current method,the this keyword is in the scope of the that method only;
+
+
+7.main method is static because we can create instance of the class only one copy.we cannot create multiple copies.
+
+  Types methods:
+  1.predefined-Methods are already defined in Java.
+    static-Method are with static keyword. 
+    non static- Methods are without static keyword.
+
+  2.Userdefined-Methods are defined by users or programmers.
+    static-Method are with static keyword. 
+    non-static- Methods are without static keyword.
+
+10.Yes,we have private constructor but we cannot initialize
+
+   Yes we can overload the constructor.
+
+Example-  
+
+        class test{
+
+         public test(){
+           //no arg constructor
+          }
+
+          public test(String name,int number){
+          this.name=name;
+          this.number=number;
+          }
+         }  
+
+
+11.
+
+public static void main(String [] args){
+
+public int[] num=[12,3,2,45,6,7,6]
+
+for(int i=0,i=i<num.length,i++){
+   system.out.in(num.length);
+}
+}
+
+
+
+ 
+  
+

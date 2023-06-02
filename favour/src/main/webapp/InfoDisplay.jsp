@@ -15,10 +15,11 @@ Favorite Food:${food};
 Favorite Place:${place};
 Favorite Person:${person};
 
-<h1>Laptop Brands</h1>
+<h1>Lap top Brands</h1>
 laptop1:${laptop0};
 laptop2:${laptop1};
 laptop3:${laptop2};
+
 
 </pre>
 </form>
