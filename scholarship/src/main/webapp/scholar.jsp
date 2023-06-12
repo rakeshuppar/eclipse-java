@@ -9,16 +9,14 @@
 	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 	crossorigin="anonymous">
 
-<link rel="stylesheet" type="text/css" href="scholar.css" />
 <head>
 <meta charset="ISO-8859-1">
 <title>X-Workz</title>
 </head>
 <body>
-	<div class="container">
-		<div class="row">
-			<div class="col">.</div>
-			<div class="col-6">
+<a href="ImageDisplay.jsp">Home</a>
+	<div>
+		<div>
 				<form method="post" action="click" enctype="multipart/form-data">
 					<h2>Scholarship Application Form</h2>
 
@@ -91,8 +89,6 @@
 					</div>
 				</form>
 			</div>
-			<div class="col">.</div>
 		</div>
-	</div>
 </body>
 </html>

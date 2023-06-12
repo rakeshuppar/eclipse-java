@@ -26,7 +26,7 @@ public class ScholarshipDTO implements Serializable, Comparable<ScholarshipDTO> 
 	private String gender;
 
 	@Min(value = 18, message = "The age should be greater than is 18")
-	@Max(value = 25, message = "The age should be greater than is 25")
+	@Max(value = 25, message = "The age should be less than is 25")
 	private int age;
 
 	@NotEmpty(message = "The category should not be empty")

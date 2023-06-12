@@ -5,6 +5,8 @@ import javax.servlet.ServletRegistration.Dynamic;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
+import com.xworkz.scholarship.constatnt.ApplicationConstant;
+
 public class ScholarshipWebinit extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 	public ScholarshipWebinit() {
@@ -32,7 +34,7 @@ public class ScholarshipWebinit extends AbstractAnnotationConfigDispatcherServle
 	@Override
 	protected void customizeRegistration(Dynamic registration) {
 		int maxSize=80000000;
-		MultipartConfigElement multipartConfigElement=new MultipartConfigElement("D:\\tomcat-files\\temp", maxSize, maxSize*2, maxSize/2);
+		MultipartConfigElement multipartConfigElement=new MultipartConfigElement(ApplicationConstant.TEMP_FILE_LOCATION, maxSize, maxSize*2, maxSize/2);
 		registration.setMultipartConfig(multipartConfigElement);
 	}
 }
