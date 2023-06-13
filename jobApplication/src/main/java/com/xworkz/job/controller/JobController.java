@@ -27,42 +27,45 @@ import com.xworkz.job.constant.ApplicationConstant;
 import com.xworkz.job.dto.JobDTO;
 import com.xworkz.job.service.JobService;
 
+import lombok.extern.slf4j.Slf4j;
+
 @Component
 @RequestMapping("/")
 @EnableWebMvc
+@Slf4j
 public class JobController {
 
 	@Autowired
-	private  JobService service; 
-	
+	private JobService service;
+
 	Collection<JobDTO> collections = new ArrayList<JobDTO>();
 
 	public JobController() {
-		System.out.println("Running no arg constructor in JobController");
+		log.info("Running no arg constructor in JobController");
 	}
 
 	@PostMapping("/send")
 	public String onClick(@Valid JobDTO dto, BindingResult result, Model model, MultipartFile file) throws IOException {
-		System.out.println("Running onClick method in JobController:" + dto);
+		log.info("Running onClick method in JobController:" + dto);
 		this.collections.add(dto);
 
 		if (result.hasErrors()) {
-			System.out.println("Data is invalid");
+			log.info("Data is invalid");
 			List<ObjectError> error = result.getAllErrors();
 			error.forEach(e -> System.out.println(e.getDefaultMessage()));
-			model.addAttribute("errors", error);
+			// model.addAttribute("errors", error);
 			model.addAttribute("dto", dto);
 			return "/job.jsp";
 
 		} else {
-			System.out.println("File Recived:" + file.getName());
-			System.out.println("File Size:" + file.getSize());
-			System.out.println("File Type:" + file.getContentType());
-			System.out.println("File Bytes:" + file.getBytes());
+			log.info("File Recived:" + file.getName());
+			log.info("File Size:" + file.getSize());
+			log.info("File Type:" + file.getContentType());
+			log.info("File Bytes:" + file.getBytes());
 			dto.setFileName(System.currentTimeMillis() + "_" + file.getOriginalFilename());
 			dto.setContectType(file.getContentType());
 			dto.setFileSize(file.getSize());
-			
+
 			this.service.validThenSave(dto);
 
 			File phyicalFile = new File(ApplicationConstant.FILE_LOCATION + dto.getFileName());
@@ -71,7 +74,7 @@ public class JobController {
 
 			}
 			model.addAttribute("Successfull", "This application is saved for:" + dto.getName() + "successfully");
-			System.out.println("Data is valid");
+			log.info("Data is valid");
 
 		}
 		return "/job.jsp";
@@ -79,14 +82,14 @@ public class JobController {
 
 	@GetMapping("/display")
 	public String dispaly(Model model) {
-		System.out.println("Running display method in Job COntroller");
+		log.info("Running display method in Job COntroller");
 		model.addAttribute("fall", this.collections);
 		return "/display.jsp";
 	}
 
 	@GetMapping("/fileDownload")
-	public String dispalyImage(String fileName, String contectType, HttpServletResponse response) throws IOException {
-		System.out.println("Running displayImage method in Job Controller ");
+	public void dispalyImage(String fileName, String contectType, HttpServletResponse response) throws IOException {
+		log.info("Running displayImage method in Job Controller ");
 		File file = new File(ApplicationConstant.FILE_LOCATION + fileName);
 		response.setContentType(contectType);
 		OutputStream outputStream = response.getOutputStream();
@@ -99,7 +102,5 @@ public class JobController {
 		}
 		in.close();
 		outputStream.flush();
-		outputStream.close();
-		return "/job.jsp";
 	}
 }

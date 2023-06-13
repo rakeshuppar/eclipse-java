@@ -30,7 +30,7 @@
 		<tbody class="table-light">
 			<c:forEach items="${fall}" var="song">
 				<tr>
-					<td>${song.name }</td>
+					<td>${song.name}</td>
 					<td>${song.qualification }</td>
 					<td>${song.age}</td>
 					<td>${song.gender }</td>

@@ -48,7 +48,7 @@ public class JobDTO implements Serializable, Comparable<JobDTO> {
 
 	@NotNull(message = "The email should not be null")
 	@NotEmpty(message = "The email should not be null")
-	@Size(min = 2, max = 20, message = "The email should be in between 2 and 20")
+	@Size(min = 2, max = 40, message = "The email should be in between 2 and 40")
 	private String email;
 
 	@NotNull(message = "The address should not be null")

@@ -8,18 +8,21 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import com.xworkz.job.dto.JobDTO;
 
+import lombok.extern.slf4j.Slf4j;
+
 @Component
 @RequestMapping("/")
 @EnableWebMvc
+@Slf4j
 public class DefaultController {
 	
 	public DefaultController() {
-		System.out.println("Running no arg constructor in DefaultController");
+		log.info("Running no arg constructor in DefaultController");
 	}
 
 	@GetMapping("/start")
 	public String defaultValue(Model model) {
-		System.out.println("Running defaultValue method in DefaultController");
+		log.info("Running defaultValue method in DefaultController");
 		model.addAttribute("dto", new JobDTO());
 		return "job.jsp";
 	}

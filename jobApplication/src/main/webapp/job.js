@@ -1,21 +1,16 @@
 
-function valid(){
-	
-	var names;
-	
-	names=document.new.name.value;
-	names=document.getElementById('name').value;
-	
-	if(names==''){
-		 alert("name should not be empty")
-		document.getElementById("fname").innerHTML="name should not be empty";
-       
-	}else if(names.length<3){
-		alert("name length should greater than 3")
-		document.getElementById("fname").innerHTML="name length should greater than 3";
-		
-		return false;
-	}
-	
-	
-}
+function validationForm() {
+		var name = document.getElementById("name").value;
+
+
+		if (name == "") {
+			// 			alert("Enter the Name");
+			document.getElementById("name2").innerHTML = "* Enter the Name";
+			return false;
+		}
+		if (name.length < 3) {
+			// 			alert("Name must be at least 3 char");
+			document.getElementById("name2").innerHTML = "* Name should have at least 3 letters";
+			return false;
+			}
+			}

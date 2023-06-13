@@ -10,14 +10,17 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import lombok.extern.slf4j.Slf4j;
+
 @ComponentScan("com.xworkz.job")
 @Configuration
 @EnableWebMvc
+@Slf4j
 
 public class JobConfiguration implements WebMvcConfigurer{
 	
 	public JobConfiguration() {
-		System.out.println("Running no arg coonstructor in JobConfiguration");
+		log.info("Running no arg coonstructor in JobConfiguration");
 	}
 	
 	@Override
